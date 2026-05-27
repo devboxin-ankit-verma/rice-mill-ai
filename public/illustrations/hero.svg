@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" fill="none" role="img" aria-label="AI-powered rice mill hero">
+  <defs>
+    <linearGradient id="h-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+    <linearGradient id="h-g2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#F5F3FF"/><stop offset="100%" stop-color="#EDE9FE"/></linearGradient>
+    <linearGradient id="h-g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff" stop-opacity=".95"/><stop offset="100%" stop-color="#F5F3FF" stop-opacity=".9"/></linearGradient>
+    <radialGradient id="h-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#A78BFA" stop-opacity=".4"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+    <filter id="h-sh"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#7C3AED" flood-opacity=".12"/></filter>
+  </defs>
+  <g data-layer="background"><ellipse cx="280" cy="380" rx="200" ry="28" fill="url(#h-glow)" opacity=".6"/><rect x="40" y="320" width="480" height="80" rx="16" fill="url(#h-g2)"/></g>
+  <g data-layer="glow" opacity=".5"><circle cx="280" cy="220" r="120" fill="url(#h-glow)"/></g>
+  <g data-layer="main" filter="url(#h-sh)">
+    <path d="M120 300 120 200 200 160 280 200 280 300Z" fill="url(#h-g2)" stroke="#EDE9FE" stroke-width="1.5"/>
+    <path d="M280 300 280 180 380 140 460 180 460 300Z" fill="#fff" stroke="#EDE9FE" stroke-width="1.5"/>
+    <rect x="150" y="220" width="40" height="50" rx="4" fill="#EDE9FE"/><rect x="320" y="210" width="50" height="60" rx="4" fill="#EDE9FE"/>
+    <rect x="400" y="120" width="24" height="60" rx="4" fill="url(#h-g1)"/>
+    <rect x="200" y="285" width="160" height="8" rx="4" fill="#EDE9FE"/>
+  </g>
+  <g data-layer="ai-ring" transform="translate(280 130)"><circle r="52" stroke="#A78BFA" stroke-width="1" stroke-dasharray="4 6" opacity=".5"/><circle r="38" stroke="url(#h-g1)" stroke-width="2"/><circle r="18" fill="url(#h-g1)"/></g>
+  <g data-layer="floating-cards">
+    <rect x="60" y="80" width="140" height="100" rx="12" fill="url(#h-g3)" stroke="#EDE9FE" filter="url(#h-sh)"/>
+    <polyline data-layer="graph-lines" points="72,155 92,140 112,148 132,125 152,132 172,118" stroke="url(#h-g1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="360" y="60" width="150" height="110" rx="12" fill="url(#h-g3)" stroke="#EDE9FE" filter="url(#h-sh)"/>
+  </g>
+  <g data-layer="particles" fill="#A78BFA"><circle cx="90" cy="50" r="3" opacity=".5"/><circle cx="500" cy="90" r="2" opacity=".4"/><circle cx="300" cy="40" r="2" opacity=".45"/></g>
+</svg>

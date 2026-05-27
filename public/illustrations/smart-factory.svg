@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" fill="none" role="img" aria-label="Smart factory">
+  <defs>
+    <linearGradient id="f-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+    <linearGradient id="f-g2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#F5F3FF"/><stop offset="100%" stop-color="#EDE9FE"/></linearGradient>
+    <linearGradient id="f-g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff" stop-opacity=".95"/><stop offset="100%" stop-color="#F5F3FF" stop-opacity=".9"/></linearGradient>
+    <radialGradient id="f-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#A78BFA" stop-opacity=".3"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+    <filter id="f-sh"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#7C3AED" flood-opacity=".12"/></filter>
+  </defs>
+  <rect x="80" y="280" width="400" height="100" rx="12" fill="url(#f-g2)"/>
+  <circle cx="280" cy="240" r="100" fill="url(#f-glow)"/>
+  <g data-layer="main" filter="url(#f-sh)">
+    <path d="M100 300 100 200 200 160 200 300Z" fill="#fff" stroke="#EDE9FE" stroke-width="1.5"/>
+    <path d="M200 300 200 170 360 110 360 300Z" fill="#fff" stroke="#EDE9FE" stroke-width="1.5"/>
+    <path d="M200 170 360 110 360 130 200 190Z" fill="url(#f-g1)" opacity=".15"/>
+  </g>
+  <path data-layer="conveyor" d="M140 310 420 310" stroke="#EDE9FE" stroke-width="12" stroke-linecap="round"/>
+  <g data-layer="ai-ring" transform="translate(280 130)"><circle r="40" stroke="#A78BFA" stroke-width="1" stroke-dasharray="3 5" opacity=".5"/><circle r="14" fill="url(#f-g1)" opacity=".7"/></g>
+  <rect x="380" y="180" width="120" height="80" rx="12" fill="url(#f-g3)" stroke="#EDE9FE"/>
+</svg>

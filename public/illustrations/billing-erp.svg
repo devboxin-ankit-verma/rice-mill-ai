@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" fill="none" role="img" aria-label="Billing and ERP">
+  <defs>
+    <linearGradient id="b-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+    <linearGradient id="b-g2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#F5F3FF"/><stop offset="100%" stop-color="#EDE9FE"/></linearGradient>
+    <linearGradient id="b-g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff" stop-opacity=".95"/><stop offset="100%" stop-color="#F5F3FF" stop-opacity=".9"/></linearGradient>
+    <radialGradient id="b-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#A78BFA" stop-opacity=".3"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+    <filter id="b-sh"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#7C3AED" flood-opacity=".12"/></filter>
+  </defs>
+  <ellipse cx="280" cy="400" rx="170" ry="22" fill="url(#b-glow)"/>
+  <g data-layer="main" filter="url(#b-sh)"><rect x="140" y="100" width="280" height="220" rx="16" fill="url(#b-g3)" stroke="#EDE9FE"/><rect x="160" y="270" width="240" height="32" rx="8" fill="url(#b-g2)"/></g>
+  <g data-layer="qr" transform="translate(460 180)"><rect x="-50" y="0" width="100" height="120" rx="14" fill="#fff" stroke="#EDE9FE"/><rect x="-38" y="12" width="76" height="76" rx="6" fill="#F5F3FF"/></g>
+  <rect x="40" y="80" width="110" height="80" rx="12" fill="url(#b-g3)" stroke="#EDE9FE"/>
+  <g data-layer="flow-arrows" stroke="#A78BFA" stroke-width="1.5" fill="none" opacity=".6"><path d="M120 200C100 200 90 160 120 150"/></g>
+  <g data-layer="particles" fill="#A78BFA"><circle cx="500" cy="100" r="2" opacity=".35"/></g>
+</svg>

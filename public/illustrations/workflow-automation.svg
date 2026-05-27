@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" fill="none" role="img" aria-label="Workflow automation">
+  <defs>
+    <linearGradient id="w-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+    <linearGradient id="w-g2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#F5F3FF"/><stop offset="100%" stop-color="#EDE9FE"/></linearGradient>
+    <linearGradient id="w-g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff" stop-opacity=".95"/><stop offset="100%" stop-color="#F5F3FF" stop-opacity=".9"/></linearGradient>
+    <radialGradient id="w-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#A78BFA" stop-opacity=".25"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+    <filter id="w-sh"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#6D28D9" flood-opacity=".1"/></filter>
+  </defs>
+  <rect x="40" y="120" width="480" height="200" rx="20" fill="url(#w-g2)" opacity=".5"/>
+  <circle cx="280" cy="220" r="110" fill="url(#w-glow)"/>
+  <path data-layer="flow-lines" d="M110 220H450" stroke="#A78BFA" stroke-width="2" stroke-dasharray="6 4" opacity=".5"/>
+  <g data-layer="main">
+    <g transform="translate(70 200)"><circle r="36" fill="#fff" stroke="#EDE9FE" filter="url(#w-sh)"/><circle r="8" fill="#7C3AED" opacity=".5"/><text y="58" text-anchor="middle" fill="#374151" font-size="10" font-weight="600" font-family="system-ui,sans-serif">Procure</text></g>
+    <g transform="translate(170 200)"><circle r="36" fill="#fff" stroke="#EDE9FE" filter="url(#w-sh)"/><circle r="8" fill="#7C3AED" opacity=".5"/><text y="58" text-anchor="middle" fill="#374151" font-size="10" font-weight="600" font-family="system-ui,sans-serif">Produce</text></g>
+    <g transform="translate(270 200)"><circle r="36" fill="#fff" stroke="#EDE9FE" filter="url(#w-sh)"/><circle r="8" fill="#7C3AED" opacity=".5"/><text y="58" text-anchor="middle" fill="#374151" font-size="10" font-weight="600" font-family="system-ui,sans-serif">Package</text></g>
+    <g transform="translate(370 200)"><circle r="36" fill="#fff" stroke="#EDE9FE" filter="url(#w-sh)"/><circle r="8" fill="#7C3AED" opacity=".5"/><text y="58" text-anchor="middle" fill="#374151" font-size="10" font-weight="600" font-family="system-ui,sans-serif">Deliver</text></g>
+    <g transform="translate(470 200)"><circle r="36" fill="#fff" stroke="#EDE9FE" filter="url(#w-sh)"/><circle r="8" fill="#7C3AED" opacity=".5"/><text y="58" text-anchor="middle" fill="#374151" font-size="10" font-weight="600" font-family="system-ui,sans-serif">Analytics</text></g>
+  </g>
+  <rect x="220" y="100" width="120" height="50" rx="12" fill="url(#w-g3)" stroke="#EDE9FE"/>
+  <circle cx="280" cy="125" r="10" fill="url(#w-g1)"/>
+</svg>

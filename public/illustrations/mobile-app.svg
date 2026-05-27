@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" fill="none" role="img" aria-label="Mobile app">
+  <defs>
+    <linearGradient id="m-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+    <linearGradient id="m-g2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#F5F3FF"/><stop offset="100%" stop-color="#EDE9FE"/></linearGradient>
+    <linearGradient id="m-g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff" stop-opacity=".95"/><stop offset="100%" stop-color="#F5F3FF" stop-opacity=".9"/></linearGradient>
+    <radialGradient id="m-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#A78BFA" stop-opacity=".35"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+    <filter id="m-sh"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#7C3AED" flood-opacity=".12"/></filter>
+  </defs>
+  <ellipse cx="280" cy="400" rx="140" ry="20" fill="url(#m-glow)"/>
+  <circle cx="280" cy="220" r="100" fill="url(#m-glow)"/>
+  <g data-layer="main" transform="translate(280 220)" filter="url(#m-sh)">
+    <rect x="-70" y="-120" width="140" height="260" rx="24" fill="#111827"/>
+    <rect x="-62" y="-108" width="124" height="236" rx="18" fill="#fff"/>
+    <rect x="-54" y="-96" width="108" height="28" rx="8" fill="url(#m-g2)"/>
+    <polyline data-layer="graph-lines" points="-40,36 -24,20 -8,28 8,12 24,18 40,8" stroke="url(#m-g1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  <rect x="350" y="120" width="140" height="56" rx="12" fill="url(#m-g3)" stroke="#EDE9FE"/>
+  <g data-layer="particles" fill="#A78BFA"><circle cx="80" cy="80" r="3" opacity=".35"/><circle cx="480" cy="300" r="2" opacity=".4"/></g>
+</svg>
