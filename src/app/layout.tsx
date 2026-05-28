@@ -71,6 +71,7 @@ export default function RootLayout({
       className={`${plusJakarta.variable} ${inter.variable} ${sora.variable} ${roboto.variable} ${lobster.variable} h-full scroll-smooth antialiased`}
     >
       <body className="relative min-h-full font-sans text-text-primary">
+        <div id="top" />
         <SmoothScroll>
           <BackgroundEffects />
           <GsapScrollTrigger />

@@ -23,5 +23,5 @@ export const CTA = {
 
 export const LOGIN = {
   label: "Login",
-  href: "/login",
+  href: "#contact",
 } as const;

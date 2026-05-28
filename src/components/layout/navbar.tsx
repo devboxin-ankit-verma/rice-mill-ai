@@ -17,7 +17,7 @@ import { useCallback, useEffect, useState } from "react";
 function BrandLogo() {
   return (
     <Link
-      href="/"
+      href="/#top"
       className="group flex items-center gap-2.5 outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60 focus-visible:ring-offset-2 rounded-lg"
       aria-label={`${BRAND.name} home`}
     >

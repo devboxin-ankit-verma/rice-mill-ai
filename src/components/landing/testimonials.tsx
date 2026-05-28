@@ -17,7 +17,11 @@ export function Testimonials() {
 
         <div className="mt-14 -mx-5 flex gap-6 overflow-x-auto px-5 pb-4 snap-x snap-mandatory scrollbar-hide md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:pb-0 lg:gap-7">
           {TESTIMONIALS.items.map((item, i) => (
-            <FadeIn key={item.name} delay={0.06 * i} className="min-w-[300px] snap-center md:min-w-0">
+            <FadeIn
+              key={item.name}
+              delay={0.06 * i}
+              className="w-[86vw] max-w-[340px] shrink-0 snap-center md:w-auto md:max-w-none md:shrink md:min-w-0"
+            >
               <motion.article
                 whileHover={prefersReducedMotion ? undefined : { y: -4 }}
                 className="card-premium flex h-full flex-col p-6 md:p-7"

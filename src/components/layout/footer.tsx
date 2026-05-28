@@ -41,7 +41,7 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5 lg:gap-10">
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-3">
+            <Link href="/#top" className="inline-flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white ring-1 ring-[#E5E7EB] shadow-[0_10px_30px_-22px_rgba(124,58,237,0.35)]">
                 <BrandLogoMark className="h-7 w-7" title={`${BRAND.name} logo`} />
               </span>
