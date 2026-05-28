@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { FAQ_ITEMS } from "@/constants/landing";
+import emailjs from "@emailjs/browser";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -59,6 +60,8 @@ function FaqItem({
 
 export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<null | "success" | "error">(null);
 
   return (
     <section id="faq" className="section-padding section-shell scroll-mt-24">
@@ -98,8 +101,34 @@ export function Faq() {
 
               <form
                 className="mt-6 grid gap-4"
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
+                  if (isSubmitting) return;
+
+                  setIsSubmitting(true);
+                  setSubmitState(null);
+
+                  try {
+                    const form = e.currentTarget;
+                    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+                    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+                    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+                    if (!serviceId || !templateId || !publicKey) {
+                      throw new Error("EmailJS env vars missing");
+                    }
+
+                    await emailjs.sendForm(serviceId, templateId, form, {
+                      publicKey,
+                    });
+
+                    form.reset();
+                    setSubmitState("success");
+                  } catch {
+                    setSubmitState("error");
+                  } finally {
+                    setIsSubmitting(false);
+                  }
                 }}
               >
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -146,10 +175,22 @@ export function Faq() {
 
                 <button
                   type="submit"
-                  className="btn-glow inline-flex h-11 items-center justify-center rounded-full bg-linear-to-r from-violet-600 via-violet-600 to-purple-600 px-6 text-[15px] font-semibold text-white shadow-[0_4px_14px_rgba(124,58,237,0.35)] transition-transform duration-300 hover:-translate-y-0.5"
+                  disabled={isSubmitting}
+                  className="btn-glow inline-flex h-11 items-center justify-center rounded-full bg-linear-to-r from-violet-600 via-violet-600 to-purple-600 px-6 text-[15px] font-semibold text-white shadow-[0_4px_14px_rgba(124,58,237,0.35)] transition-transform duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0"
                 >
-                  Request a callback
+                  {isSubmitting ? "Sending..." : "Request a callback"}
                 </button>
+
+                {submitState === "success" && (
+                  <p className="text-[13px] font-medium text-emerald-700">
+                    Thanks! Your request was sent. We’ll contact you shortly.
+                  </p>
+                )}
+                {submitState === "error" && (
+                  <p className="text-[13px] font-medium text-red-600">
+                    Couldn’t send right now. Please try again.
+                  </p>
+                )}
 
                 <p className="text-[12px] leading-relaxed text-text-secondary">
                   By submitting, you agree to be contacted by MillFlow AI.

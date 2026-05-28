@@ -30,7 +30,7 @@ function BrandLogo() {
           MillFlow <span className="text-brand-gradient">AI</span>
         </span>
         <span className="mt-1 text-[11px] font-medium tracking-[-0.01em] text-[#6B7280]">
-          by Developer Box AI
+          by Developerbox Ai Factory
         </span>
       </span>
     </Link>
