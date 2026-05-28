@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/container";
 import { FOOTER } from "@/constants/landing";
 import { BRAND } from "@/constants/navigation";
 import Link from "next/link";
+import { BrandLogoMark } from "@/components/layout/brand-logo-mark";
 import { Globe, Mail, MapPin, MessageCircle, Phone, Share2 } from "lucide-react";
 
 const socialIcons = {
@@ -40,8 +41,14 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5 lg:gap-10">
           <div className="lg:col-span-2">
-            <Link href="/" className="font-jakarta text-lg font-bold text-text-primary">
-              {BRAND.name}
+            <Link href="/" className="inline-flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white ring-1 ring-[#E5E7EB] shadow-[0_10px_30px_-22px_rgba(124,58,237,0.35)]">
+                <BrandLogoMark className="h-7 w-7" title={`${BRAND.name} logo`} />
+              </span>
+              <span className="flex flex-col leading-none">
+                <span className="font-jakarta text-lg font-bold text-text-primary">{BRAND.name}</span>
+                <span className="mt-1 text-[12px] font-medium text-[#6B7280]">by Developer Box AI</span>
+              </span>
             </Link>
             <p className="text-body mt-3 max-w-sm text-[15px]">{FOOTER.description}</p>
             {contactItems.length > 0 && (
@@ -61,14 +68,16 @@ export function Footer() {
               {FOOTER.social.map((s) => {
                 const Icon = socialIcons[s.label as keyof typeof socialIcons] ?? Share2;
                 return (
-                  <Link
+                  <a
                     key={s.label}
                     href={s.href}
                     aria-label={s.label}
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E5E7EB] bg-white text-[#6B7280] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#7C3AED]/30 hover:text-[#7C3AED]"
                   >
                     <Icon className="h-4 w-4" />
-                  </Link>
+                  </a>
                 );
               })}
             </div>

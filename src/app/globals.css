@@ -36,14 +36,34 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-roboto), var(--font-inter), system-ui, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* Responsive fundamentals (mobile-first) */
+*,
+*::before,
+*::after {
+  min-width: 0;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.text-hero,
+.text-section-heading {
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .font-jakarta {
@@ -317,6 +337,36 @@ body {
   .btn-glow {
     transition-duration: 0.01ms !important;
     transform: none !important;
+  }
+}
+
+.loading-sweep {
+  width: 30%;
+  transform: translateX(-120%);
+  animation: loading-sweep 1.25s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  will-change: transform, width;
+}
+
+@keyframes loading-sweep {
+  0% {
+    transform: translateX(-120%);
+    width: 26%;
+  }
+  45% {
+    transform: translateX(40%);
+    width: 64%;
+  }
+  100% {
+    transform: translateX(220%);
+    width: 26%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-sweep {
+    animation: none !important;
+    transform: none !important;
+    width: 100% !important;
   }
 }
 

@@ -29,6 +29,9 @@ function BrandLogo() {
         <span className="font-jakarta text-[15px] font-bold tracking-[-0.02em] text-text-primary sm:text-base">
           MillFlow <span className="text-brand-gradient">AI</span>
         </span>
+        <span className="mt-1 text-[11px] font-medium tracking-[-0.01em] text-[#6B7280]">
+          by Developer Box AI
+        </span>
       </span>
     </Link>
   );

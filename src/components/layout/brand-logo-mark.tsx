@@ -25,11 +25,16 @@ export function BrandLogoMark({
           <stop stopColor="#FFFFFF" stopOpacity="0.85" />
           <stop offset="1" stopColor="#FFFFFF" stopOpacity="0" />
         </linearGradient>
+        <radialGradient id="rm-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(42 16) rotate(135) scale(36 36)">
+          <stop stopColor="#A78BFA" stopOpacity="0.55" />
+          <stop offset="1" stopColor="#7C3AED" stopOpacity="0" />
+        </radialGradient>
       </defs>
 
       {/* soft tile */}
-      <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#rm-grad)" opacity="0.14" />
-      <rect x="6.5" y="6.5" width="51" height="51" rx="13.5" stroke="url(#rm-grad)" opacity="0.35" />
+      <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#rm-grad)" opacity="0.16" />
+      <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#rm-glow)" opacity="0.9" />
+      <rect x="6.5" y="6.5" width="51" height="51" rx="13.5" stroke="url(#rm-grad)" opacity="0.4" />
 
       {/* patti / leaf mark */}
       <path

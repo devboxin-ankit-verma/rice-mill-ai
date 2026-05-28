@@ -10,6 +10,7 @@ import { HeroFactoryPremium } from "@/components/illustrations/premium/hero-fact
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { CheckCircle2, Play, Sparkles } from "lucide-react";
 import { useRef } from "react";
+import { GradientText } from "@/components/ui/gradient-text";
 
 const STAT_NUMBERS = [
   { value: 500, suffix: "+" },
@@ -87,7 +88,15 @@ export function Hero() {
             <FadeIn delay={0.05}>
               <h1 className="font-jakarta text-hero max-w-2xl text-text-primary">
                 Run your{" "}
-                <span className="text-brand-gradient">rice mill</span> smarter
+                <GradientText
+                  colors={["#7C3AED", "#A78BFA", "#7C3AED", "#8B5CF6", "#7C3AED"]}
+                  animationSpeed={3.2}
+                  pauseOnHover
+                  className="font-jakarta"
+                >
+                  rice mill
+                </GradientText>{" "}
+                smarter
               </h1>
             </FadeIn>
 

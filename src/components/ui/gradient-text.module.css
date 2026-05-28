@@ -1,0 +1,90 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  overflow: hidden;
+  cursor: default;
+}
+
+.horizontal {}
+.vertical {}
+.diagonal {}
+
+.pauseOnHover:hover .text {
+  animation-play-state: paused;
+}
+
+.withBorder {
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+}
+
+.border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.95;
+  pointer-events: none;
+  background-image: var(--gt-gradient);
+  background-size: var(--gt-bg-size);
+  background-repeat: repeat;
+  animation-duration: var(--gt-duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--gt-direction);
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background-image: var(--gt-gradient);
+  background-size: var(--gt-bg-size);
+  background-repeat: repeat;
+  animation-duration: var(--gt-duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--gt-direction);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.horizontal .text,
+.horizontal .border,
+.diagonal .text,
+.diagonal .border {
+  animation-name: gt-pan-x;
+}
+
+.vertical .text,
+.vertical .border {
+  animation-name: gt-pan-y;
+}
+
+@keyframes gt-pan-x {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gt-pan-y {
+  from {
+    background-position: 50% 0%;
+  }
+  to {
+    background-position: 50% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text,
+  .border {
+    animation: none !important;
+  }
+}
+

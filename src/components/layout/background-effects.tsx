@@ -11,11 +11,14 @@ const Galaxy = dynamic(() => import("@/components/background/Galaxy"), {
 export function BackgroundEffects() {
   const prefersReducedMotion = useReducedMotion();
   const [enableGalaxy, setEnableGalaxy] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
     if (prefersReducedMotion) return;
-    const isDesktop = window.matchMedia?.("(min-width: 1024px)")?.matches ?? true;
-    if (!isDesktop) return;
+    const mq = window.matchMedia?.("(min-width: 1024px)");
+    const update = () => setIsDesktop(mq?.matches ?? true);
+    update();
+    mq?.addEventListener?.("change", update);
 
     const idle = (cb: () => void) => {
       const ric = window.requestIdleCallback as undefined | ((fn: () => void, opts?: { timeout?: number }) => number);
@@ -24,6 +27,7 @@ export function BackgroundEffects() {
     };
 
     idle(() => setEnableGalaxy(true));
+    return () => mq?.removeEventListener?.("change", update);
   }, [prefersReducedMotion]);
 
   return (
@@ -34,12 +38,12 @@ export function BackgroundEffects() {
       {enableGalaxy && (
         <div className="pointer-events-auto absolute inset-0 opacity-[0.75]">
           <Galaxy
-            density={1.2}
-            glowIntensity={0.4}
-            saturation={0.55}
+            density={isDesktop ? 1.2 : 0.85}
+            glowIntensity={isDesktop ? 0.4 : 0.28}
+            saturation={isDesktop ? 0.55 : 0.35}
             hueShift={260}
-            twinkleIntensity={0.32}
-            rotationSpeed={0.06}
+            twinkleIntensity={isDesktop ? 0.32 : 0.22}
+            rotationSpeed={isDesktop ? 0.06 : 0.04}
             starSpeed={0.5}
             mouseInteraction
             mouseRepulsion
